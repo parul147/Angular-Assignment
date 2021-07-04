@@ -1,0 +1,73 @@
+<h1 class="mt-5" style="text-align: center">User Information</h1>
+<a
+  style="margin-left: 10px"
+  [routerLink]="['/home/add/0']"
+  class="btn btn-primary mt-5 mb-3"
+  >Add User</a
+>
+<table
+  class="
+    table
+    table-hover
+    table-striped
+    table-bordered
+    table-responsive-md
+    table-striped
+    text-center
+  "
+  style="margin-left: 15px"
+>
+  <thead>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>MiddleName</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>PhoneNumber</th>
+    <th>Role</th>
+    <th>Address</th>
+    <th>Options</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.FirstName }}</td>
+      <td>{{ user.MiddleName }}</td>
+      <td>{{ user.LastName }}</td>
+      <td>{{ user.Email }}</td>
+      <td>{{ user.PhoneNumber }}</td>
+      <td>{{ user.Role }}</td>
+      <td>{{ user.Address }}</td>
+      <td>
+        <a class="btn btn-success" [routerLink]="['/home/edit', user.id]"
+          >Edit</a
+        >
+        <button
+          class="btn btn-danger"
+          (click)="onDelete(user.id)"
+          [routerLink]="['home/edit,user.id']"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button
+  style="width: 150px; margin-left: 650px"
+  class="btn btn-dark btn-warning"
+  (click)="resetValue()"
+>
+  <a style="text-decoration: none; color: white; margin: 60px auto" href="/home"
+    >Refresh Data</a
+  >
+</button>
+<button
+  style="width: 150px; margin-left: 650px; margin-top: 10px"
+  class="btn btn-dark btn-warning"
+>
+  <a href="/" style="text-decoration: none; color: white; margin: 60px auto"
+    >Go Back</a
+  >
+</button>
+<router-outlet></router-outlet>

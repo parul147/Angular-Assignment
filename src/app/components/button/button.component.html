@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+<div style="align-items: center; text-align: center">
+  <button
+    id="loadButton"
+    class="btn btn-lg"
+    style="
+      display: block;
+      text-align: center;
+      margin: 300px auto;
+      background-color: rgb(134, 31, 31, 0.6);
+    "
+    (click)="OnValue()"
+    #load
+  >
+    <a
+      [routerLink]="['/home']"
+      style="text-decoration: none; color: black"
+      #load
+      >Load Data</a
+    >
+  </button>
+</div>

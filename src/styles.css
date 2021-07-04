@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+th,
+td {
+  border: 1px solid rgb(128, 118, 118);
+  align-items: center;
+  align-content: center;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #805a5ab6;
+  align-items: center;
+  align-content: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #3f2828bd;
+}
+table tr {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
